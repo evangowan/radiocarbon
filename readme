@@ -9,7 +9,7 @@ It will produce a folder called "OxCal". The scripts in these folders depend on 
 So far there are the following tools:
 
 **************
-* reservor
+* reservoir
 **************
 
 This includes scripts to extract the delta-R value from Martin Butzin et al (2017) modelled marine reservoir corrections.
