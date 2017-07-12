@@ -1,0 +1,15 @@
+Evan Gowan's tools relating manipulating and using radiocarbon dates.
+
+
+In this top directory, make sure to extract OxCal (download OxCalDistribution.zip from here: https://c14.arch.ox.ac.uk/oxcal.html).
+It will produce a folder called "OxCal". The scripts in these folders depend on OxCal being there!
+
+----------------------------------
+
+So far there are the following tools:
+
+**************
+* reservor
+**************
+
+This includes scripts to extract the delta-R value from Martin Butzin et al (2017) modelled marine reservoir corrections.
