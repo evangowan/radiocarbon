@@ -13,3 +13,9 @@ So far there are the following tools:
 **************
 
 This includes scripts to extract the delta-R value from Martin Butzin et al (2017) modelled marine reservoir corrections.
+
+**************
+* calibrate
+**************
+
+Tools to calibrate radiocarbon dates with OxCal, and output statistics of the calibrated date into a file.
