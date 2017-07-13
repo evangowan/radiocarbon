@@ -17,7 +17,7 @@ rm test_file.txt
 # 0 - no correction
 # 1 - marine
 # 2 - terrestrial correction
-
+# 3 - marine mammal correction
 
 #
 # For the calibration curve setting, select "marine" for marine samples, and "terrestrial" for terrestrial samples
@@ -76,7 +76,7 @@ do
 		cal_line="Curve(\"IntCal13\",\"../bin/intcal13.14c\");"
 	fi
 
-	if  [ "${correction_type}" = "1" ] || [ "${correction_type}" = "3" ]
+	if  [ "${correction_type}" = "1" ] || [ "${correction_type}" = "3" ] 
 	then
 		delta_r="Delta_R(\"correction\", ${correction_amount}, ${correction_error});"
 	else

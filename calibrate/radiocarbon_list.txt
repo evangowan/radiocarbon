@@ -1,10 +1,4 @@
-LAB_ID	LATITUDE	LONGITUDE	Age	error	correction_type	Reservoir Correction	Reservoir error	curve	MATERIAL	OBJECTID
-BGS-711	56.541667	-94	6280	180	1	110	65	marine	Hiatella arctica	7099
-BGS-712	56.43	-94.2	6990	130	1	110	65	marine	Hiatella arctica	7100
-BGS-713	56.42	-94.216667	6750	150	1	110	65	marine	Hiatella arctica	7101
-BGS-714	56.533333	-94.083333	6900	150	1	110	65	marine	Hiatella arctica	7102
-BGS-791	56.541667	-94	6760	100	1	110	65	marine	Hiatella arctica	7103
-BGS-798	56.533333	-94.083333	6900	100	1	110	65	marine	Hiatella arctica	7105
-BGS-813	56.416667	-94.216667	8200	300	1	470	100	marine	Hiatella arctica	7107
-BGS-814	56.416667	-94.216667	7300	200	1	470	100	marine	Hiatella arctica	7108
-BGS-815	56.435	-94.175	7250	150	1	470	100	marine	Hiatella arctica	7109
+LAB_ID	LATITUDE	LONGITUDE	Age	error	correction_type	Reservoir Correction	Reservoir error	curve	MATERIAL	Reference
+BGS-711	56.541667	-94	6280	180	1	110	65	marine	Hiatella arctica	Morlan et al., 2000
+AA-40409	70.26275	-115.374	1790	44	3	170	95	marine	Balaena mysticetus	Dyke and Savelle, 2003; Furze et al., 2014
+AA-62373	70.39502	-96.422498	4059	43	0	0	0	terrestrial	Picea charcoal	Savelle and Dyke, 2009

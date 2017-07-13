@@ -24,6 +24,10 @@ way. Chances are, the amount of contamination is low. Nevertheless, it is pruden
 were done by old counter methods, and likely required a substantial volume to produce a date. Most samples reported during the
 past 10 years have been dates on macrofossils using AMS methods, and should be held to a higher confidence.
 
+Marine mammals are problematic because although their diet is mostly organisms from the ocean, they do not stay put
+in the same location. I have been using the suggested corrections by Furze et al (2014) for reservoir
+correction.
+
 
 References
 -----------------------------------
@@ -36,6 +40,10 @@ Brock, F., Lee, S., Housley, R.A., Bronk Ramsey, C., 2011. Variation in the radi
 
 Dyke, A., Moore, A., Robertson, L., 2003. Deglaciation of North America. Open File
 	1574. Geological Survey of Canada.
+
+Furze, M.F., Pieńkowski, A.J. and Coulthard, R.D., 2014. New cetacean ΔR values for 
+	Arctic North America and their implications for marine-mammal-based 
+	palaeoenvironmental reconstructions. Quaternary Science Reviews, 91, 218-241.
 
 Grimm, E.C., Maher Jr., L.J., Nelson, D.M., 2009. The magnitude of error in conventional
 	bulk-sediment radiocarbon dates from central North America. Quaternary Research 72, 
