@@ -1,0 +1,51 @@
+General warnings about radiocarbon dates
+--------------------------------------------
+
+Using a terrestrial freshwater correction might be a bit tenuous. If you look at Grimm et al. (2009), the range of error for bulk freshwater
+samples and contemporaneous terrestrial macrofossils in freshwater basins located in previously glaciated regions in the midwestern
+United States ranges between 0 and 8000 years, with variations between 500 and 2000 years common. MacDonald et al. (1991) did a similar
+study in the foothills of Alberta, and found a discrepency that was as large as 5000 years.
+
+Peat is also problematic when it comes to radiocarbon dating. Brock et al. (2010) investigated the age of a tephra layer in
+a periglacial environment in the Yukon and found the variability of ages in different fractions of the peat lead to variability
+on the order of 2000-3000 radiocarbon years (though all of the radiocarbon are over 25,000 yr BP). Another example by Brock et al (2011)
+in a previously glaciated region of Germany. The age of Holocene peat using different acid fractions and crystal sizes from the same horizons
+gave a varibility of 1000-1500 radiocarbon years. The age discrepancy between the true age of the peat and the bulk date may
+not be as great as with freshwater samples, but could still make the full map older than it actually should be.
+
+Though not a bulk sediment, charcoal may also be a problematic material. A good illustration of this is in Hebda et al (2008),
+who noted that there was a lot of redeposited charcoal in a region of northeastern British Columbia. The charcoal was derived
+from nearby sediments, and gave ages that were significantly older than that of deposition. Fossil bones have also been known to be
+redeposited in postglacial sediment (i.e. Hebda et al. 2008 and Hills and Wilson, 2003), though it is likely less ambiguous whether
+they represent pre or post glacial origin.
+
+Note that I imagine that Dyke et al (2003) only picked samples where such contamination problems did not affect the date in an obvious
+way. Chances are, the amount of contamination is low. Nevertheless, it is prudent to be cautious with such samples, as most
+were done by old counter methods, and likely required a substantial volume to produce a date. Most samples reported during the
+past 10 years have been dates on macrofossils using AMS methods, and should be held to a higher confidence.
+
+
+References
+-----------------------------------
+
+
+Brock, F., Lee, S., Housley, R.A., Bronk Ramsey, C., 2011. Variation in the radiocarbon
+	age of different fractions of peat: a case study from Ahrenshöft, northern
+	Germany. Quaternary Geochronology 6, 550-555.
+
+
+Dyke, A., Moore, A., Robertson, L., 2003. Deglaciation of North America. Open File
+	1574. Geological Survey of Canada.
+
+Grimm, E.C., Maher Jr., L.J., Nelson, D.M., 2009. The magnitude of error in conventional
+	bulk-sediment radiocarbon dates from central North America. Quaternary Research 72, 
+	301-308.
+
+Hebda, R.J., Burns, J.A., Geertsema, M. and Jull, A.T., 2008. AMS-dated late Pleistocene 
+	taiga vole (Rodentia: Microtus xanthognathus) from northeast British Columbia, 
+	Canada: a cautionary lesson in chronology  Canadian Journal of Earth Sciences, 
+	45(5), 611-618.
+
+Hills, L. and Wilson, M., 2003. Helmeted muskox (Bootherium bombifrons) from near Fort 
+	Saskatchewan, Alberta: dating evidence for redeposition in late Pleistocene 
+	alluvium. Géographie physique et Quaternaire, 57(2-3), 237-240.

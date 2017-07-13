@@ -1,0 +1,5 @@
+Steps:
+
+- create a tab separated value with the radiocarbon dates in radocarbon_list.txt. An example of the format is given here.
+- run generate_priors.sh to run OxCal and generate the calibrated probability distribution functions (priors)
+- run age_ranges.sh to create a file with statistics of the priors, which is put in the file "age_parameters"
