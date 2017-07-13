@@ -8,6 +8,7 @@ Steps:
 # 0 - no correction
 # 1 - marine
 # 2 - terrestrial correction
+# 3 - marine mammal correction
 
 - run generate_priors.sh to run OxCal and generate the calibrated probability distribution functions (priors)
 - run age_ranges.sh to create a file with statistics of the priors, which is put in the file "age_parameters"
