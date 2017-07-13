@@ -1,5 +1,13 @@
 Steps:
 
-- create a tab separated value with the radiocarbon dates in radocarbon_list.txt. An example of the format is given here.
+- create a tab separated value with the radiocarbon dates in radocarbon_list.txt. An example of the format is given here. Some notes (also in generate_priors.sh):
+
+# Sample Code, latitude, longitude, age (yr BP), error (1 sigma), correction type, correction amount, correction error, calibration curve, material dated, reference
+
+# for correction type, use:
+# 0 - no correction
+# 1 - marine
+# 2 - terrestrial correction
+
 - run generate_priors.sh to run OxCal and generate the calibrated probability distribution functions (priors)
 - run age_ranges.sh to create a file with statistics of the priors, which is put in the file "age_parameters"
