@@ -34,11 +34,12 @@ y_corner=2.1
 # parameters for the relative sea level plot
 ###############################################################
 
+# x-axis range
 # for best results, use a multiple of 1000 years
 max_time=14000
 min_time=0
 
-
+# y-axis range
 # for best results, use a multiple of 20 m
 max_elevation=40
 min_elevation=-40

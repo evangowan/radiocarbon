@@ -1,0 +1,15 @@
+Things that are in here:
+
+plot_regional_maps.sh: this plots maps of defined regions for sea level indicators. Useful because the characteristics of sea level change vary dramatically spatially.
+
+plot_relative_sea_level.sh: plots relative sea level for these regions
+
+
+
+
+------------------------
+
+
+Regions are defined in the file "region_list". The regions defined here are the basis for the file names with the plot parameters (in the folder "regions") and in the spreadsheet with the sea level data "data/sea_level_indicators.txt"
+
+To modify the plot parameters, look at the files in the folder "regions". Make sure to make a new file for each region you create.
