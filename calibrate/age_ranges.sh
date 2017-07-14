@@ -60,7 +60,7 @@ do
 	if [ "${sample_code}" = "LAB_ID" ]
 	then
 
-		echo $sample_code $latitude $longitude median_age mode_age one_sigma_lower one_sigma_higher two_sigma_lower two_sigma_higher >> age_parameters
+		echo $sample_code $latitude $longitude median_age mode_age one_sigma_higher one_sigma_lower two_sigma_higher two_sigma_lower >> age_parameters
 
 	else
 

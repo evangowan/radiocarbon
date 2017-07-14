@@ -1,4 +1,13 @@
 LAB_ID	LATITUDE	LONGITUDE	Age	error	correction_type	Reservoir Correction	Reservoir error	curve	MATERIAL	Reference
-BGS-711	56.541667	-94	6280	180	1	110	65	marine	Hiatella arctica	Morlan et al., 2000
+BGS-711	56.541667	-94	6280	180	1	         362	200	marine	Hiatella arctica	Morlan et al., 2000
 AA-40409	70.26275	-115.374	1790	44	3	170	95	marine	Balaena mysticetus	Dyke and Savelle, 2003; Furze et al., 2014
 AA-62373	70.39502	-96.422498	4059	43	0	0	0	terrestrial	Picea charcoal	Savelle and Dyke, 2009
+GSC-2364	71.95	-125.416667	9490	40	0			terrestrial	Salix in lake sed	Worsley, 2000
+GSC-2545	72.036944	-120.25111	11600	50	1	         321	200	marine	Hiatella arctica	Vincent, 1982
+GSC-2633	72.046944	-120.23361	10900	55	1	         259	200	marine	Hiatella arctica	Lowdon and Blake, 1980
+GSC-3292	71.95	-125.21666	8560	105	0	0	0	terrestrial	Salix detritus, lake sed	Blake, 1983
+GSC-3369	71.983333	-125.4	9420	200	0	0	0	terrestrial	Salix in lake sed	Worsley, 2000
+GSC-49	71.4	-121.43333	11320	50	1	         188	200	marine	Hiatella arctica	Dyck and Fyles, 1962
+RL-765	71.575	-123.48333	2320	120	0	0	0	terrestrial	Ovibos moschatus	Arnold, 1980
+RL-766	71.575	-123.48333	2290	120	0	0	0	terrestrial	Ovibos moschatus	Arnold, 1980
+RL-767	71.575	-123.48333	2390	110	0	0	0	terrestrial	Ovibos moschatus	Arnold, 1980
