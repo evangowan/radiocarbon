@@ -212,7 +212,10 @@ program relative_plot_param
 	close(unit=bounded_unit)
 
 
+	! deallocate storage
 
+	deallocate(lab_id_array, two_sigma_higher_array,&
+	  two_sigma_lower_array)
 
 
 	
