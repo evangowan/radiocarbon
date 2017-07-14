@@ -19,3 +19,20 @@ This includes scripts to extract the delta-R value from Martin Butzin et al (201
 **************
 
 Tools to calibrate radiocarbon dates with OxCal, and output statistics of the calibrated date into a file.
+
+
+**************
+* sea_level
+**************
+
+Tools to plot and assess relative sea level data, including glacio-isostatic adjustment.
+
+
+-----------------------------------
+
+
+Many of these tools were developed during my PHD. If you use them, I ask you to cite the following paper:
+
+Gowan, E.J., Tregoning, P., Purcell, A., Montillet, J.P. and McClusky, S., 2016. 
+	A model of the western Laurentide Ice Sheet, using observations of glacial 
+	isostatic adjustment. Quaternary Science Reviews, 139, pp.1-16.
