@@ -1,0 +1,10 @@
+Region	LAB_ID	LATITUDE	LONGITUDE	MIN RSL	MAX RSL	min elevation error	max elevation error
+banks_island_south	GSC-2364	71.95	-125.416667		2		1
+banks_island_south	GSC-2545	72.036944	-120.25111	21		5	
+banks_island_south	GSC-2633	72.046944	-120.23361	10		10	
+banks_island_south	GSC-3292	71.95	-125.21666		2		1
+banks_island_south	GSC-3369	71.983333	-125.4		3		1
+banks_island_south	GSC-49	71.4	-121.43333	18		10	
+banks_island_south	RL-765	71.575	-123.48333		2.5		1
+banks_island_south	RL-766	71.575	-123.48333		2.5		1
+banks_island_south	RL-767	71.575	-123.48333		2.5		1
