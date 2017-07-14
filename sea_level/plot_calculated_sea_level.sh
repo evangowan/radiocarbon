@@ -113,7 +113,7 @@ do
 
 	if [ -e "region_sl.txt" ]
 	then
-		psxy region_sl.txt -Wthinnest,black  -P  -O -JX -R  >> ${plot}
+		psxy region_sl.txt -Wthinnest,black  -P  -O -JX -R  -K >> ${plot}
 	fi
 
 
