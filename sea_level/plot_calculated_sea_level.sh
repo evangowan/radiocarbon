@@ -32,9 +32,9 @@ if [ ! -e "${calc_sl_file}" ]
 then
 	echo "you must change the line to the path where the file rsl_spreadsheet.dat is stored so it can be moved here"
 	echo "make sure to run SELEN and calculate sea level at the locations given in ${sea_level_file} first"
-	exit 0
+#	exit 0
 
-	# cp -f /path_to_selen/DEPOTS/depot-TEST/rsl/rsl-isites/rsl_spreadsheet.dat
+	 cp -f /scratch/users/egowan-local/gia/SELEN-forked/selen/DEPOTS/depot-TEST/rsl/rsl-isites/rsl_spreadsheet.dat .
 
 fi
 
@@ -43,7 +43,7 @@ xtext="Age (cal yr BP)"
 xtickint=2000
 xsubtickint=1000
 
-ytext="Elevation (m)"
+
 ytickint=40
 ysubtickint=20
 
@@ -82,6 +82,7 @@ do
 
 	./relative_plot_param
 
+	ytext="Elevation (m)"
 	plot=${folder_sl}/plot_${regions}_data.ps
 
 
@@ -107,13 +108,17 @@ do
 
 	if [ -e "bounded_plot.txt" ]
 	then
-		psxy bounded_plot.txt -Exy -Ggreen  -P  -O -JX -R -Sc0.3 -Wblack >> ${plot}
+		psxy bounded_plot.txt -Exy -Ggreen  -P -K  -O -JX -R -Sc0.3 -Wblack >> ${plot}
 	fi
 
 
 	if [ -e "region_sl.txt" ]
 	then
-		psxy region_sl.txt -Wthinnest,black  -P  -O -JX -R  -K >> ${plot}
+
+
+		psxy region_sl.txt -Wthinnest,black  -V -P  -O -JX -R -K >> ${plot}
+
+
 	fi
 
 
@@ -138,5 +143,81 @@ END
 4.5 0.5 maximum
 7.5 0.5 bounded
 END
+
+
+	# plot difference
+
+	rm minimum_diff_plot.txt maximum_diff_plot.txt bounded_diff_plot.txt
+
+	./sl_diff_params
+
+
+
+	ytext="Sample Elev - Calc SL (m)"
+	plot=${folder_diff}/plot_${regions}_data.ps
+
+	max_elevation=$( awk '{print $1}' min_max_range.txt )
+	min_elevation=$( awk '{print $2}' min_max_range.txt )
+	x_width=$( echo "scale=3; ${max_time} / ${relative_time} * ${plot_width}" | bc )
+	y_width=$( echo "scale=3; (${max_elevation}-(${min_elevation})) / ${relative_elevation} * ${plot_height}" | bc )
+
+
+	psbasemap -X${xshift} -Y${yshift} -R${min_time}/${max_time}/${min_elevation}/${max_elevation} -JX-${x_width}/${y_width} -Ba"${xtickint}"f"${xsubtickint}":"${xtext}":/a"${ytickint}"f"${ysubtickint}":"${ytext}":WSne  -P -K --FONT_ANNOT_PRIMARY=16p --FONT_ANNOT_SECONDARY=12p --FONT_LABEL=18p > ${plot}
+
+
+
+
+
+	if [ -e "maximum_plot_diff.txt" ]
+	then
+		psxy maximum_plot_diff.txt -Exy -Gred  -P -K -O -JX -R -Si0.3 -Wblack >> ${plot}
+	fi
+
+	if [ -e "minimum_plot_diff.txt" ]
+	then
+		psxy minimum_plot_diff.txt -Exy -Gblue  -P -K -O -JX -R -St0.3 -Wblack >> ${plot}
+	fi
+
+	if [ -e "bounded_plot_diff.txt" ]
+	then
+		psxy bounded_plot_diff.txt -Exy -Ggreen  -P -K  -O -JX -R -Sc0.3 -Wblack >> ${plot}
+	fi
+
+
+	psxy << END -Wthickest,black,-  -P  -O -JX -R  -K >> ${plot}
+${min_time} 0
+${max_time} 0
+END
+
+	pstext << END -R -JX -O -K -P -F+f12p,Helvetica,black,+cTR -D-0.2/-0.2 >> ${plot}
+Score: $(awk '{print $1}' score.txt)
+END
+
+	pstext << END -R -JX -O -K -P -F+f12p,Helvetica,black,+cBR -D-0.2/0.2 >> ${plot}
+\# samples: $(awk '{print $2}' region_sl_header.txt)
+END
+
+	xshift_now=$( echo "${xshift} + 1.5" | bc )
+	yshift_now=$( echo "${yshift} - 7.1" | bc )
+
+	psxy << END -Xf${xshift_now} -Yf${yshift_now} -R0/10/0/1 -JX10c -P -K -O -Gblue -St0.35 -Wblack  >> ${plot}
+1 0.5
+END
+
+	psxy << END  -R -JX -P -K -O -Gred -Si0.35 -Wblack  >> ${plot}
+4 0.5
+END
+
+	psxy << END  -R -JX -P -K -O -Ggreen -Sc0.35 -Wblack  >> ${plot}
+7 0.5
+END
+
+
+	pstext << END -R -JX -P  -O -F+f12p,Helvetica -F+jLM -F+a0  >> ${plot}
+1.5 0.5 minimum
+4.5 0.5 maximum
+7.5 0.5 bounded
+END
+
 
 done

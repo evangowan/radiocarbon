@@ -99,7 +99,7 @@ program relative_plot_param
 
 			if(success) THEN
 
-				write(maximum_plot_unit,*) average_age, maximum_elevation, age_error, maximum_error
+				write(maximum_plot_unit,*) average_age, maximum_elevation, age_error, maximum_error, lab_id
 
 			else
 
@@ -145,7 +145,7 @@ program relative_plot_param
 
 			if(success) THEN
 
-				write(minimum_plot_unit,*) average_age, minimum_elevation, age_error, minimum_error
+				write(minimum_plot_unit,*) average_age, minimum_elevation, age_error, minimum_error, lab_id
 
 			else
 
@@ -193,10 +193,12 @@ program relative_plot_param
 
 			if(success) THEN
 
-				bounded_elevation = (maximum_elevation - minimum_elevation) / 2.
+
+
+				bounded_elevation = (maximum_elevation + minimum_elevation) / 2.
 				bounded_error = sqrt((bounded_elevation - minimum_elevation)**2 + maximum_error**2 + minimum_error**2)
 
-				write(bounded_plot_unit,*) average_age, minimum_elevation, age_error, bounded_error
+				write(bounded_plot_unit,*) average_age, minimum_elevation, age_error, bounded_error, lab_id
 
 			else
 

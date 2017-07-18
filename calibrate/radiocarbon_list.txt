@@ -2,7 +2,7 @@ LAB_ID	LATITUDE	LONGITUDE	Age	error	correction_type	Reservoir Correction	Reservo
 BGS-711	56.541667	-94	6280	180	1	         362	200	marine	Hiatella arctica	Morlan et al., 2000
 AA-40409	70.26275	-115.374	1790	44	3	170	95	marine	Balaena mysticetus	Dyke and Savelle, 2003; Furze et al., 2014
 AA-62373	70.39502	-96.422498	4059	43	0	0	0	terrestrial	Picea charcoal	Savelle and Dyke, 2009
-GSC-2364	71.95	-125.416667	9490	40	0			terrestrial	Salix in lake sed	Worsley, 2000
+GSC-2364	71.95	-125.416667	9490	40	0	0	0	terrestrial	Salix in lake sed	Worsley, 2000
 GSC-2545	72.036944	-120.25111	11600	50	1	         321	200	marine	Hiatella arctica	Vincent, 1982
 GSC-2633	72.046944	-120.23361	10900	55	1	         259	200	marine	Hiatella arctica	Lowdon and Blake, 1980
 GSC-3292	71.95	-125.21666	8560	105	0	0	0	terrestrial	Salix detritus, lake sed	Blake, 1983
@@ -11,3 +11,96 @@ GSC-49	71.4	-121.43333	11320	50	1	         188	200	marine	Hiatella arctica	Dyck 
 RL-765	71.575	-123.48333	2320	120	0	0	0	terrestrial	Ovibos moschatus	Arnold, 1980
 RL-766	71.575	-123.48333	2290	120	0	0	0	terrestrial	Ovibos moschatus	Arnold, 1980
 RL-767	71.575	-123.48333	2390	110	0	0	0	terrestrial	Ovibos moschatus	Arnold, 1980
+AA-61956	70.984751	-96.967353	2250	53	0	0	0	terrestrial	terrestrial Bayone	Savelle and Dyke, 2009
+AA-61957	70.930108	-96.503129	1878	52	0	0	0	terrestrial	terrestrial Bayone	Savelle and Dyke, 2009
+AA-61958	70.370337	-96.460816	4486	62	0	0	0	terrestrial	terrestrial Bayone	Savelle and Dyke, 2009
+AA-61959	70.371762	-96.487625	1623	50	0	0	0	terrestrial	terrestrial Bayone	Savelle and Dyke, 2009
+AA-62366	70.390533	-96.439602	4164	58	0	0	0	terrestrial	Rangifer tarandus	Savelle and Dyke, 2009
+AA-62367	71.055444	-96.391635	1297	38	0	0	0	terrestrial	Salix charcoal	Savelle and Dyke, 2009
+AA-62368	71.025223	-96.404489	3615	43	0	0	0	terrestrial	Salix charcoal	Savelle and Dyke, 2009
+AA-62369	71.007628	-96.433723	3916	43	0	0	0	terrestrial	Picea charcoal	Savelle and Dyke, 2009
+AA-62370	70.927353	-96.499826	4416	44	0	0	0	terrestrial	Picea charcoal	Savelle and Dyke, 2009
+AA-62372	70.955528	-96.481922	4162	42	0	0	0	terrestrial	Picea charcoal	Savelle and Dyke, 2009
+AA-62373	70.39502	-96.422498	4059	43	0	0	0	terrestrial	Picea charcoal	Savelle and Dyke, 2009
+AA-62374	70.368505	-96.467129	4580	44	0	0	0	terrestrial	Picea charcoal	Savelle and Dyke, 2009
+AA-62375	70.393948	-96.443102	2445	40	0	0	0	terrestrial	Salix charcoal	Savelle and Dyke, 2009
+AA-62459	70.400735	-96.420546	2966	43	0	0	0	terrestrial	Picea charcoal	Savelle and Dyke, 2009
+AA-62460	70.979083	-96.476801	2886	63	0	0	0	terrestrial	Picea charcoal	Savelle and Dyke, 2009
+AA-62461	71.003471	-96.443272	3893	64	0	0	0	terrestrial	Picea charcoal	Savelle and Dyke, 2009
+AA-62462	70.406838	-96.404907	3149	70	0	0	0	terrestrial	Picea charcoal	Savelle and Dyke, 2009
+AA-62463	70.401527	-96.4182	2751	62	0	0	0	terrestrial	Picea charcoal	Savelle and Dyke, 2009
+AA-63086	71.051967	-96.395824	2972	41	0	0	0	terrestrial	burnt terrestrial moss	Savelle and Dyke, 2009
+AA-63087	70.852	-96.6	1404	39	0	0	0	terrestrial	Salix charcoal	Savelle and Dyke, 2009
+AA-63088	70.399881	-96.439418	1193	38	0	0	0	terrestrial	burnt terrestrial moss	Savelle and Dyke, 2009
+AA-63089	70.361462	-96.489718	1878	41	0	0	0	terrestrial	Salix charcoal	Savelle and Dyke, 2009
+GSC-144	70.366667	-96.316667	6410	80	1	         370	200	marine	Astarte Bayorealis	Dyck and Fyles, 1964
+GSC-2720	71.1875	-93.75	9630	65	1	         301	200	marine	Mya truncata	Dyke, 1984
+GSC-2722	70.958333	-95.4	9440	50	1	         405	200	marine	Mya truncata	Dyke, 1984
+GSC-2917	70.420833	-96.016667	9190	40	1	         353	200	marine	Hiatella arctica	Dyke, 1984
+GSC-597	70.333333	-92.233333	9350	75	1	         404	200	marine	Hiatella arctica, Mya truncata	Lowdon et al., 1967
+GSC-601	70.133333	-92.45	8060	75	1	         360	200	marine	Hiatella arctica, Mya truncata	Lowdon et al., 1967
+GSC-603	70.133333	-92.45	8060	75	1	         360	200	marine	Balanus Bayalanus, Bayalanus crenatus	Lowdon et al., 1967
+GSC-6120	71.458333	-94.483333	9710	50	1	         307	200	marine	Mya truncata	McNeely and Brennan (2005)
+GSC-6141	71.216667	-93.666667	9680	45	1	         315	200	marine	Hiatella arctica	Dyke et al., 2011
+GSC-6143	70.4375	-95.583333	8280	45	1	         365	200	marine	Mya truncata	Dyke et al., 2011
+GSC-6825	71.05171992	-96.35785951	5010	40	1	         339	200	marine	Mya truncata	McNeely and Brennan (2005)
+GSC-6826	71.04146142	-96.33944705	5860	35	1	         318	200	marine	Hiatella arctica, Myt truncata	McNeely and Brennan (2005)
+GSC-6827	71.03811373	-96.33501499	6000	30	1	         368	200	marine	Mya truncata	McNeely and Brennan (2005)
+GSC-6828	71.03228156	-96.3070022	8000	40	1	         407	200	marine	Hiatella arctica	McNeely and Brennan (2005)
+GSC-6829	70.82050728	-96.37906205	9300	40	1	         370	200	marine	Mya truncata	McNeely and Brennan (2005)
+GSC-6830	70.394403	-96.346895	3920	30	1	         324	200	marine	Astarte Bayorealis	McNeely and Brennan (2005)
+GSC-6831	70.39299	-96.338688	5280	30	1	         292	200	marine	Hiatella arctica	McNeely and Brennan (2005)
+GSC-6832	70.379815	-96.331912	6380	35	1	         372	200	marine	Hiatella arctica	McNeely and Brennan (2005)
+GSC-6838	70.987367	-96.473596	520	30	0	0	0	terrestrial	Picea wood, archaeological	Savelle and Dyke, 2009
+GSC-6859	70.371912	-96.4875	990	35	0	0	0	terrestrial	Larix wood, archaeological	Savelle and Dyke, 2009
+S-2200	70	-92.25	840	105	0	0	0	terrestrial	Rangifer tarandus	Morrison, 1989
+UCIAMS-42163	71.7418	-94.0393	5530	20	0	0	0	terrestrial	Picea driftwood	Dyke et al., 2011
+UCIAMS-42164	71.7299	-93.8965	3670	20	0	0	0	terrestrial	Picea driftwood	Dyke et al., 2011
+UCIAMS-42165	71.7288	-93.9127	4125	20	0	0	0	terrestrial	Larix driftwood	Dyke et al., 2011
+UCIAMS-42166	71.729	-93.862	3955	20	0	0	0	terrestrial	Picea driftwood	Dyke et al., 2011
+UCIAMS-42167	71.7512	-93.7969	5255	20	0	0	0	terrestrial	Picea driftwood	Dyke et al., 2011
+UCIAMS-42168	71.687	-93.7822	6195	20	0	0	0	terrestrial	Picea driftwood	Dyke et al., 2011
+UCIAMS-42169	71.7591	-93.741	4620	20	0	0	0	terrestrial	Larix driftwood	Dyke et al., 2011
+UCIAMS-42170	71.7586	-93.7411	5130	20	0	0	0	terrestrial	Picea driftwood	Dyke et al., 2011
+UCIAMS-42171	71.7545	-93.7709	6515	25	0	0	0	terrestrial	Larix driftwood	Dyke et al., 2011
+UCIAMS-42172	71.7482	-93.7144	5645	20	0	0	0	terrestrial	Larix driftwood	Dyke et al., 2011
+UCIAMS-42173	71.7109	-93.7245	4065	20	0	0	0	terrestrial	Picea driftwood	Dyke et al., 2011
+UCIAMS-42174	70.8942	-92.8915	1520	25	0	0	0	terrestrial	wood in Dorset site	Dyke et al., 2011
+UCIAMS-42177	70.9826	-92.8905	1405	25	0	0	0	terrestrial	burnt moss	Dyke et al., 2011
+UCIAMS-42178	71.7447	-93.8764	1365	20	0	0	0	terrestrial	Picea wood in midpassage	Dyke et al., 2011
+UCIAMS-42179	71.7447	-93.8766	1420	25	0	0	0	terrestrial	Larix wood in midpassage	Dyke et al., 2011
+UCIAMS-42184	71.6131	-94.2534	9105	25	3	170	95	marine	Balaena mysticetus	Dyke et al., 2011
+UCIAMS-42185	71.6302	-93.8897	8080	25	3	170	95	marine	Balaena mysticetus	Dyke et al., 2011
+UCIAMS-42205	70.9205	-92.9033	3645	15	0	0	0	terrestrial	terrestrial Bayone	Dyke et al., 2011
+UCIAMS-42206	70.9207	-92.9073	3805	15	0	0	0	terrestrial	terrestrial Bayone	Dyke et al., 2011
+UCIAMS-42207	70.92	-92.9076	4505	15	1	         334	200	marine	bear? Bayone	Dyke et al., 2011
+UCIAMS-42208	71.761	-93.681	925	15	0	0	0	terrestrial	Rangifer tarandus	Dyke et al., 2011
+UCIAMS-42210	71.7636	-93.76	4030	15	1	         310	200	marine	bear? Bayone	Dyke et al., 2011
+UCIAMS-42211	71.7444	-93.7009	4255	15	1	         331	200	marine	bear? Bayone	Dyke et al., 2011
+UCIAMS-43961	71.7476	-93.6874	475	15	0	0	0	terrestrial	Salix charcoal	Dyke et al., 2011
+UCIAMS-43979	70.9052	-92.9673	5460	15	3	170	95	marine	Balaena mysticetus	Dyke et al., 2011
+UCIAMS-43980	70.9227	-92.9122	4725	15	3	170	95	marine	Balaena mysticetus	Dyke et al., 2011
+UCIAMS-43981	70.9199	-92.9173	5365	20	3	170	95	marine	Balaena mysticetus	Dyke et al., 2011
+UCIAMS-43982	71.7212	-93.9302	7115	20	3	170	95	marine	Balaena mysticetus	Dyke et al., 2011
+UCIAMS-43983	71.7419	-94.0173	4720	15	3	170	95	marine	Balaena mysticetus	Dyke et al., 2011
+UCIAMS-43984	71.7299	-93.8938	4190	15	3	170	95	marine	Balaena mysticetus	Dyke et al., 2011
+UCIAMS-43985	71.7518	-93.8388	1540	15	3	170	95	marine	Balaena mysticetus	Dyke et al., 2011
+UCIAMS-43986	71.766	-93.7802	3190	15	3	170	95	marine	Balaena mysticetus	Dyke et al., 2011
+UCIAMS-43987	71.7683	-93.7516	2915	15	3	170	95	marine	Balaena mysticetus	Dyke et al., 2011
+UCIAMS-43999	71.7008	-93.7343	4105	25	3	170	95	marine	Balaena mysticetus	Dyke et al., 2011
+UCIAMS-44000	71.7224	-93.6974	1190	25	3	170	95	marine	Balaena mysticetus	Dyke et al., 2011
+UCIAMS-44001	71.7224	-93.6974	3565	25	3	170	95	marine	Balaena mysticetus	Dyke et al., 2011
+UCIAMS-44002	71.6701	-94.391	1945	25	0	0	0	terrestrial	Rangifer tarandus	Dyke et al., 2011
+UCIAMS-44003	71.6905	-94.3328	3035	25	3	170	95	marine	Balaena mysticetus	Dyke et al., 2011
+UCIAMS-44004	71.7252	-93.9042	5205	25	3	170	95	marine	Balaena mysticetus	Dyke et al., 2011
+UCIAMS-44005	71.7455	-93.8064	6805	30	3	170	95	marine	Balaena mysticetus	Dyke et al., 2011
+UCIAMS-44131	70.9369	-92.9132	3875	15	3	170	95	marine	Balaena mysticetus	Dyke et al., 2011
+UCIAMS-49806	71.7293	-93.8816	4200	15	3	170	95	marine	Balaena mysticetus	Dyke et al., 2011
+UCIAMS-49807	71.7111	-93.7166	4355	20	3	170	95	marine	Balaena mysticetus	Dyke et al., 2011
+UCIAMS-49808	71.7242	-93.8874	5195	20	3	170	95	marine	Balaena mysticetus	Dyke et al., 2011
+UCIAMS-49809	71.7469	-93.8596	1535	15	3	170	95	marine	Balaena mysticetus	Dyke et al., 2011
+UCIAMS-49810	71.6801	-93.7811	4960	20	3	170	95	marine	Balaena mysticetus	Dyke et al., 2011
+UCIAMS-49811	71.7212	-93.7083	3465	20	3	170	95	marine	Balaena mysticetus	Dyke et al., 2011
+UCIAMS-49825	71.7522	-93.8162	3885	15	3	170	95	marine	Balaena mysticetus	Dyke et al., 2011
+UCIAMS-49826	71.7286	-93.8632	4560	20	3	170	95	marine	Balaena mysticetus	Dyke et al., 2011
+UCIAMS-71589	71.7269	-94.2944	1265	25	0	0	0	terrestrial	Picea charcoal	Dyke et al., 2011

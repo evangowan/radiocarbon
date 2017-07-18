@@ -12,11 +12,15 @@ program extract_calc_sea_level
 	character(len=80), parameter :: calc_sl_file = "rsl_spreadsheet.dat"
 	character(len=80), parameter :: location_file = "locations.txt"
 	character(len=80), parameter :: output_file = "region_sl.txt"
-	integer, parameter :: calc_sl_unit = 10, location_unit=20, output_unit = 30
+	character(len=80), parameter :: output_header_file = "region_sl_header.txt"
+	integer, parameter :: calc_sl_unit = 10, location_unit=20, output_unit = 30, output_header_unit=40
 
-	integer :: number_locations, counter, number_times, istat
+	integer :: number_locations, counter, number_times, istat, region_number_locations
 
-	double precision :: time, longitude, latitude, elevation
+	double precision, allocatable, dimension(:) :: time, calc_sl
+	logical, allocatable, dimension(:) :: location_mask
+
+	double precision :: longitude, latitude, elevation
 	double precision, dimension(:), allocatable :: longitude_array, latitude_array
 
 	character(len=80) :: lab_id
@@ -32,10 +36,13 @@ program extract_calc_sea_level
 
 	number_locations = number_entries(location_unit)
 
+
 	! allocate storage
 
 	allocate(lab_id_array(number_locations), longitude_array(number_locations),&
-	  latitude_array(number_locations))
+	  latitude_array(number_locations), location_mask(number_locations))
+
+	location_mask = .true.
 
 	! read in the regional sea level locations
 	do counter = 1, number_locations
@@ -50,39 +57,53 @@ program extract_calc_sea_level
 
 	number_times = find_times(calc_sl_unit)
 
+	allocate(calc_sl(number_times),time(number_times))
 
-	!search through the sea level file
+	!search through the sea level file 
 
 	open(unit=output_unit, file=output_file, form="formatted", access="sequential", status="replace")
+	region_number_locations = 0
+
 
 	search_sl: do
 
-		read(calc_sl_unit,*,iostat=istat) time, longitude, latitude, elevation
-		if (istat /=0) then
-			exit search_sl
-		end if
 
-		backspace(unit=calc_sl_unit)
-
-		call find_lab_id(lab_id_array,longitude_array,latitude_array,number_locations,longitude,latitude,lab_id,found_lab_id)
-
-		! write GMT header
-		if(found_lab_id) THEN
-			write(output_unit,'(A1,1X,I4,A80)') ">", number_times, lab_id
-		endif
 
 		do counter = 1, number_times
 
-			read(calc_sl_unit,*,iostat=istat) time, longitude, latitude, elevation
+			read(calc_sl_unit,*,iostat=istat) time(counter), longitude, latitude, calc_sl(counter)
 			if (istat /=0) then
-				write(6,*) "warning, something is wrong in the calculated sea level file"
 				exit search_sl
 			end if
+		end do
 
+		found_lab_id = .true.
+
+
+
+		do while (found_lab_id)
+			call find_lab_id(lab_id_array,longitude_array,latitude_array,location_mask,number_locations,longitude,&
+			  latitude,lab_id,found_lab_id)
+
+			! write GMT header
 			if(found_lab_id) THEN
-				write(output_unit,*) time*1000., elevation
-			endif
+				region_number_locations = region_number_locations + 1
+				write(output_unit,'(A1,1X,I4,1X,I4,1X,A80)') ">", number_times, region_number_locations, lab_id
 
+				do counter = 1, number_times
+
+
+
+					if(found_lab_id) THEN
+
+						write(output_unit,*) time(counter)*1000., calc_sl(counter)
+					endif
+
+
+
+				end do
+
+			endif
 
 
 		end do
@@ -90,8 +111,13 @@ program extract_calc_sea_level
 
 	end do search_sl
 
+	! write out a separate header file for the output file
+	open(unit=output_header_unit, file=output_header_file, form="formatted", access="sequential", status="replace")
+	write(output_header_unit,'(A1,1X,I6,1X,I4)') "#", region_number_locations, number_times ! '#' is needed to ensure that GMT does not read the line
+
 	close(unit=calc_sl_unit)
 	close(unit=output_unit)
+	close(unit=output_header_unit)
 
 	! deallocate storage
 
@@ -100,17 +126,19 @@ program extract_calc_sea_level
 
 contains
 
-subroutine find_lab_id(lab_id_array,longitude_array,latitude_array,number_locations,longitude,latitude,lab_id,found_lab_id)
+subroutine find_lab_id(lab_id_array,longitude_array,latitude_array,location_mask,number_locations,longitude,latitude,&
+	lab_id,found_lab_id)
 
 	integer, intent(in) :: number_locations
 	character(len=80), dimension(number_locations), intent(in) :: lab_id_array
 	double precision, dimension(number_locations), intent(in) :: longitude_array,latitude_array
+	logical, dimension(number_locations), intent(inout) :: location_mask
 	double precision, intent(in) :: longitude,latitude
 
 	character(len=80), intent(out) :: lab_id
 	logical, intent(out) :: found_lab_id
 
-	integer :: counter, lat_int, long_int
+	integer :: counter, lat_int, long_int, lat_diff, long_diff
 
 	! SELEN rounds things to four decimal places, have to do the same here
 	double precision :: mult_factor = 1000.
@@ -126,12 +154,23 @@ subroutine find_lab_id(lab_id_array,longitude_array,latitude_array,number_locati
 
 	search_locations: do counter = 1, number_locations
 
-		if(nint(latitude_array(counter)*mult_factor) == lat_int .and. nint(longitude_array(counter)*mult_factor) == long_int) THEN
-			found_lab_id = .true.
-			lab_id = lab_id_array(counter)
-			exit search_locations
+		if(location_mask(counter)) THEN
+
+			lat_diff = abs(nint(latitude_array(counter)*mult_factor) - lat_int)
+			long_diff = abs(nint(longitude_array(counter)*mult_factor) - long_int)
+
+			if(lat_diff < 3 .and. long_diff < 3) THEN
+				found_lab_id = .true.
+				lab_id = lab_id_array(counter)
+				location_mask(counter) = .false.
+				exit search_locations
+			endif
 		endif
 		
+!	if(counter == number_locations) THEN
+!		write(6,*) "did not find id for LL"
+!		write(6,*) longitude, latitude
+!	endif
 
 	end do search_locations
 
