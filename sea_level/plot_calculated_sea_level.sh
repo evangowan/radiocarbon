@@ -147,7 +147,7 @@ END
 
 	# plot difference
 
-	rm minimum_diff_plot.txt maximum_diff_plot.txt bounded_diff_plot.txt
+	rm minimum_plot_diff.txt maximum_plot_diff.txt bounded_plot_diff.txt
 
 	./sl_diff_params
 
