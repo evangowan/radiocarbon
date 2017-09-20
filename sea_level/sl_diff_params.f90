@@ -136,7 +136,7 @@ program sl_diff_params
 		open(unit=in_unit, file=in_file, form="formatted", access="sequential", status="old")
 		open(unit=out_unit, file=out_file, form="formatted", access="sequential", status="replace")
 
-		score = 0.
+!		score = 0.
 		read_maximum: do
 
 			read(in_unit,*, iostat=istat) age, elevation, age_range, elevation_range, lab_id
@@ -191,7 +191,7 @@ program sl_diff_params
 		open(unit=in_unit, file=in_file, form="formatted", access="sequential", status="old")
 		open(unit=out_unit, file=out_file, form="formatted", access="sequential", status="replace")
 
-		score = 0.
+!		score = 0.
 		read_bounded: do
 
 			read(in_unit,*, iostat=istat) age, elevation, age_range, elevation_range, lab_id
